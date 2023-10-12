@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 9000
 spring:
   datasource:
     url: jdbc:h2:mem:testdb
@@ -8,9 +8,12 @@ spring:
     password: ''
   h2:
     console:
-      enable: true
+      enabled: true
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update
-      show-sql: true
+    show-sql: true
+  flyway:
+    username: sa
+    password: ''
